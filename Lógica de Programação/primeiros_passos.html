@@ -1,0 +1,27 @@
+<script>
+
+    function pulaLinha(){
+        document.write("</br>");
+    }
+
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var ano = 2019;
+    document.write("Maycon tem " + (ano - 1994) + " anos");
+    pulaLinha();
+    //document.write("</br>");
+    
+    ano = 2020;
+    mostra("Maycon agora possui " + (ano -1994) + " anos");
+
+    var media = (39 + 20 + 41)/3;
+    mostra("A idade do pedro é " + Math.round(media)); // Math.round() arredonda o cálculo
+
+    var idadeFlavio = 39;
+    var nome = 'Flávio';
+
+    mostra('A idade de ' + nome + ' é ' + idadeFlavio);
+</script>

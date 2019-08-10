@@ -1,0 +1,26 @@
+<script>
+					
+	function pulaLinha(){
+		document.write("</br>");
+		document.write("</br>");
+	}
+
+    function mostra(frase){
+    	document.write(frase);
+    	pulaLinha();
+    }			
+
+    function calculaImc(peso, altura){
+    	 return peso / (altura * altura);
+    }	
+
+    var peso = prompt("Digite o seu peso");
+    var altura = prompt("Digite a sua altura");
+    var imc = calculaImc(peso, altura);
+    alert("O imc calculado é: " + imc);
+    // calculaImc(pesoMaycon, alturaMaycon);
+ 	// var mayconImc = calculaImc(96, 1.77);
+	// mostra("O imc do maycon é " + mayconImc);
+	// mostra("O imc calculado é " + imc);
+
+</script>

@@ -1,0 +1,29 @@
+<meta charset=utf-8>
+
+<input type="" name="">
+<button type="">Testar</button>
+<script>
+
+	var segredo = Math.round(Math.random() * 10);
+
+	// querySelector pega o elemento fora do javascript e retorna
+	var entrada = document.querySelector("input"); 
+	// Inicia a página dando foco para o input
+	entrada.focus();
+	function verifica(){
+		if(entrada.value == segredo){		
+			alert("acertei");
+		}else{
+			alert("Você errou");
+		}
+	// Pegando o valor da variável e passando vazio	
+	entrada.value = "";	
+	entrada.focus();	
+	}	
+	var botao = document.querySelector("button");
+	// O botao recebe o código que possui dentro da função, quando clicado retorna
+	// se colocar () junto com o nome da função, ex: verifica(), ele executa sem ser chamado
+	// se colocar o nome da função sem colocar (), o botao vai receber o código que possui dentro da função e só será executado quando for clicado
+	botao.onclick = verifica; 
+
+</script>

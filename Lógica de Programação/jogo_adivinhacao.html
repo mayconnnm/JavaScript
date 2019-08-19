@@ -1,0 +1,39 @@
+<meta charset=utf-8>
+<script>
+	// Math é o método de matemática(cálculo) e dentro dele possui métodos como o round e random, round arredonda o valor e random me passa um número aleatório a cada interação
+	// Arredonda o valor de random de 0 a 10
+    
+    // Imprime no console do browser
+    // console.log(numeroPensado);
+    // passando para inteiro, pois o prompt sempre passa o valor como String
+    var novamente = null;
+    while(novamente == true || novamente == null){
+        var numeroPensado = Math.round(Math.random() * 10);
+        var tentativa = 0;
+        var chance = 3;
+        while(tentativa < 3){
+            var chute = parseInt(prompt("Digite o número de 0 a 10"));                     
+            if(chute == numeroPensado){
+            	alert("Você acertou!");
+                break;
+            }else{
+                chance--;
+                if(chance > 1){
+                    alert("Não foi dessa vez, mas não fique triste, você possui ainda " + chance + " chances");
+            	// document.write("Não foi dessa vez, o número pensado foi: " + numeroPensado);
+                }else if(chance == 1){
+                    alert("Não foi dessa vez, mas não fique triste, você possui ainda " + chance + " chance");
+                }else{
+                    alert("Que pena, você não possui mais tentativas");
+                }
+            }
+            tentativa++;
+        }
+            var opcao = prompt("Deseja jogar novamente? Digite 1 para 'Sim' ou 2 para 'Não'");
+            if(opcao == 1){
+                novamente = true;    
+            }else{
+                novamente = false;   
+            }  
+    }  
+</script>

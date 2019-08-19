@@ -1,0 +1,29 @@
+<meta charset=utf-8>
+
+<input type="" name="">
+<button type="">Testar</button>
+<script>
+
+	var segredos = [1, 3, 5, 7, 9];
+	var entrada = document.querySelector("input"); 
+	entrada.focus();
+	var achou = false;
+	function verificaArray(){
+		// length pega o comprimento de elementos no array
+		for( var posicao = 0; posicao < segredos.length; posicao++){
+			if(entrada.value == segredos[posicao]){
+				alert("Você acertou!");
+				achou = true;
+				break;
+			}
+		}
+		if(achou == false){
+				alert("você errou");
+			}
+		entrada.value = "";	
+		entrada.focus();	
+	}	
+	var botao = document.querySelector("button");
+	botao.onclick = verificaArray; 
+
+</script>

@@ -1,3 +1,5 @@
+<meta charset=utf-8>
+
 <script>
 					
 	function pulaLinha(){
@@ -14,10 +16,20 @@
     	 return peso / (altura * altura);
     }	
 
+    //Prompt da um alerta com input de entrada para o usuário passar um dado
     var peso = prompt("Digite o seu peso");
     var altura = prompt("Digite a sua altura");
     var imc = calculaImc(peso, altura);
-    alert("O imc calculado é: " + imc);
+    mostra("O imc calculado é: " + imc);
+
+    if(imc < 18.5){
+        mostra("Seu imc está abaixo do recomendado");
+    }else if(imc >= 18.5 && imc <= 30.00){
+        mostra("Seu imc está normal");
+    }else if(imc > 30.00){
+        mostra("Seu imc está acima do recomendado");
+    }
+
     // calculaImc(pesoMaycon, alturaMaycon);
  	// var mayconImc = calculaImc(96, 1.77);
 	// mostra("O imc do maycon é " + mayconImc);

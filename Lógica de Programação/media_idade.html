@@ -1,0 +1,15 @@
+<meta charset=utf-8>
+<script>
+	
+	var quantidadePessoas = parseInt(prompt("Serão quantas pessoas que entrará no cálculo da idade?"));
+	var totalPessoas = 0;
+	var totalIdades = 0;
+	while(totalPessoas < quantidadePessoas){
+		var idade = parseInt(prompt("Digite a idade"));
+		totalIdades += idade;
+		totalPessoas++;
+	}
+
+	var media = totalIdades / totalPessoas;
+	document.write("A média da idade das pessoas que participaram é: " + media);
+</script>
